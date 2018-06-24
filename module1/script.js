@@ -8,39 +8,15 @@ let loginEnter = prompt('Введите ваш логин:');
 
 
 if (loginEnter === null) {
-    alert('Cancel') 
+    alert('Отменено пользователем') 
 }   else if(loginEnter !== ADMIN_LOGIN) {
-    alert('Доступ запрещен!')
-}     else {
-    let passwordEnter = prompt('Введите ваш пароль:')
-}
-
-if (passwordEnter === null) {
-    alert('Cancel')
-}  else if(passwordEnter !== ADMIN_PASSWORD) {
-    alert('Доступ запрещен!')
-} else {
-    alert('Welocome ' + ADMIN_LOGIN) 
-}
-
-const ADMIN_LOGIN = 'admin';
-const ADMIN_PASSWORD = '123';
-
-
-// let passwordEnter;
-let loginEnter = prompt('Введите ваш логин:');
-
-
-if (loginEnter === null) {
-    alert('Cancel') 
-}   else if(loginEnter !== ADMIN_LOGIN) {
-    alert('Доступ запрещен!')
+    alert('Доступ запрещен')
 }     else {
     let passwordEnter = prompt('Введите ваш пароль:')
     if (passwordEnter === null) {
-        alert('Cancel')
+        alert('Отменено пользователем')
     }  else if(passwordEnter !== ADMIN_PASSWORD) {
-        alert('Доступ запрещен!')
+        alert('Доступ запрещен')
     } else {
         alert('Welocome ' + ADMIN_LOGIN) 
     }
