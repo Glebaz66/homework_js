@@ -2,19 +2,29 @@
 
 let guest;
 let name = 'Mango';
+
 guest = name;
+
 console.log(guest);
 
 // --------------------------------------------1----------------------------------------------
 
 // --------------------------------------------2----------------------------------------------
 
-const day = 02;
-const month = 10;
+let day = 02;
+let month = 01;
 const year = 2017;
-const date = `${day}/ + ${month}/ + ${year}`;
-const date = 'day + "//\/\" + month + "\/\\/\" + year';
-console.log(date); // 02\10\2017
+
+if(day < 9){
+   day = '0' + day
+} 
+if(month < 9) {
+   month = '0' + month
+}
+
+const date = `${day}/${month}/${year}`;
+
+console.log(date); 
 
 // --------------------------------------------2----------------------------------------------
 
@@ -30,8 +40,10 @@ alert(youName);
 const name = 'Mango';
 const date = '14/08/2031';
 const roomType = 'люкс';
+
 const message = `${name} прибывает на отдых ${date} в ${roomType}.`;
-console.log(message); // Mango прибывает на отдых 14/08/2031 в люкс.
+
+console.log(message);
 
 // --------------------------------------------4----------------------------------------------
 
@@ -40,7 +52,9 @@ console.log(message); // Mango прибывает на отдых 14/08/2031 в 
 const padding = "20px";
 const border = "5px";
 const contentWidth = "100px";
+
 let totalWidth = (Number.parseInt (padding) + Number.parseInt (border) + Number.parseInt (contentWidth));
+
 console.log(totalWidth + 'px');
 
 // --------------------------------------------5----------------------------------------------
@@ -48,6 +62,7 @@ console.log(totalWidth + 'px');
 // --------------------------------------------6----------------------------------------------
 
 let whatYear = prompt('Какой сейчас год?');
+
 if (whatYear == 2018) {
     alert('Все верно')
 } else {
@@ -80,6 +95,19 @@ if (int === null) {
 
 // --------------------------------------------7----------------------------------------------
 
+// --------------------------------------------8----------------------------------------------
+const num = Number.parseInt(Math.random() * 100);
+
+let type;
+if(num % 2){
+    type = ('odd')
+} else {
+    type = ('even')
+}
+
+console.log(`${num} is ${type}`);
+
+// --------------------------------------------8----------------------------------------------
 
 // --------------------------------------------9----------------------------------------------
 let hours = 8;
