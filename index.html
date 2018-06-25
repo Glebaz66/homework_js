@@ -2,12 +2,9 @@
     body {
         background-color: rgb(119, 0, 255);
     }
-    p,a {
+    p {
         text-transform: uppercase;
         color: azure;
-    }
-    p {
-
     }
     ul {
         width: 200px;
@@ -15,10 +12,15 @@
         list-style: none;
     }
     a {
-        text-decoration: none;;
+        text-decoration: none;
+        text-transform: capitalize;
     }
     a:hover {
         color: #a8dede;
+        transition: all .5s;
+    }
+    a:hover ul {
+        width: 220px;
         transition: all .5s;
     }
 </style>
