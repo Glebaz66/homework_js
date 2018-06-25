@@ -1,26 +1,26 @@
 
-// const ADMIN_LOGIN = 'admin';
-// const ADMIN_PASSWORD = '123';
+const ADMIN_LOGIN = 'admin';
+const ADMIN_PASSWORD = '123';
 
 
-// // let passwordEnter;
-// let loginEnter = prompt('Введите ваш логин:');
+// let passwordEnter;
+let loginEnter = prompt('Введите ваш логин:');
 
 
-// if (loginEnter === null) {
-//     alert('Отменено пользователем') 
-// }   else if(loginEnter !== ADMIN_LOGIN) {
-//     alert('Доступ запрещен')
-// }     else {
-//     let passwordEnter = prompt('Введите ваш пароль:')
-//     if (passwordEnter === null) {
-//         alert('Отменено пользователем')
-//     }  else if(passwordEnter !== ADMIN_PASSWORD) {
-//         alert('Доступ запрещен')
-//     } else {
-//         alert('Welocome ' + ADMIN_LOGIN) 
-//     }
-// }
+if (loginEnter === null) {
+    alert('Отменено пользователем') 
+}   else if(loginEnter !== ADMIN_LOGIN) {
+    alert('Доступ запрещен')
+}     else {
+    let passwordEnter = prompt('Введите ваш пароль:')
+    if (passwordEnter === null) {
+        alert('Отменено пользователем')
+    }  else if(passwordEnter !== ADMIN_PASSWORD) {
+        alert('Доступ запрещен')
+    } else {
+        alert('Welocome ' + ADMIN_LOGIN) 
+    }
+}
 
 
 // ---------------------------------------------additional taks-----------------------------------------------
