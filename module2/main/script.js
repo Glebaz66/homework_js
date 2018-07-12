@@ -15,9 +15,9 @@ do {
     console.log(numbers);
     
     for (let item of numbers) {
-      total += numbers;
+      total += Number(item);
     }
-    alert ('Общая сумма чисел равна ${total}');
+    alert (`Общая сумма чисел равна ${total}`);
 // ------------------------------homework------------------------------
 
 
