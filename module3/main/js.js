@@ -23,6 +23,6 @@ const checkIfLoginExists = function (logins, login) {
     } 
 }
 
-checkIfLoginExists();
+checkIfLoginExists(login);
 
 
