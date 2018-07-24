@@ -5,30 +5,24 @@ let login = prompt('Enter login');
 
 const checkLoginValidity = (logins) => {
     if (login.length >= 4 && login.length <= 16){
-        console.log(true);
+        return console.log(true);
         
     }   else {
-        console.log(false);
+        return console.log(false);
     }
 }
 checkLoginValidity();
 
 
-// const checkIfLoginExists = (logins, login) => {
+const checkIfLoginExists = function (logins, login) {
+    
+    if (logins.includes(login)){
+        return console.log(true);
+    } else {
+        return console.log(false);
+    } 
+}
 
-//         if (logins.includes (login)){
-//             return console.log('ok');
-//         } else {
-//             return console.log('not ok');
-//         } 
-//     }
-
-
-    const checkLoginExists = function(login) {
-        if (logins.includes(login)) {
-          return true;
-        } else {
-          return false;
-        }
-      }
 checkIfLoginExists();
+
+
