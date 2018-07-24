@@ -1,28 +1,51 @@
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
-let login = prompt('Enter login');
+let enterLogin = prompt('Enter login');
 
 
 const checkLoginValidity = (logins) => {
-    if (login.length >= 4 && login.length <= 16){
-        return console.log(true);
+    if (enterLogin.length >= 4 && enterLogin.length <= 16){
+        return true
         
     }   else {
-        return console.log(false);
+        return false
     }
 }
-checkLoginValidity();
+checkLoginValidity(enterLogin);
 
 
-const checkIfLoginExists = function (logins, login) {
+const checkIfLoginExists = (logins, enterLogin) => {
     
-    if (logins.includes(login)){
-        return console.log(true);
+    if (logins.includes(enterLogin)){
+        return true
+         
     } else {
-        return console.log(false);
+        return false
     } 
 }
 
-checkIfLoginExists(login);
+checkIfLoginExists(logins, enterLogin);
+
+
+const addLogin = (logins, enterLogin) => {
+
+    checkLoginValidity(enterLogin);
+
+    if(checkLoginValidity(enterLogin) === true){
+        checkIfLoginExists(enterLogin);
+        
+        if(checkIfLoginExists(enterLogin) === false){
+                logins.push(enterLogin);
+                alert('Логин успешно добавлен');
+            } else {
+                alert('Логин уже существует');
+        }
+    }   else {
+        alert('Логин должен содержать от 4 до 16 символов');
+    }
+} 
+addLogin(logins, enterLogin);
+
+console.log(logins);
 
 
