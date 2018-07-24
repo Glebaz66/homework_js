@@ -29,13 +29,13 @@ checkIfLoginExists(logins, enterLogin);
 
 const addLogin = (logins, enterLogin) => {
 
-    checkLoginValidity(enterLogin);
+    checkLoginValidity(logins, enterLogin);
 
-    if(checkLoginValidity(enterLogin) === true){
-        checkIfLoginExists(enterLogin);
+    if(checkLoginValidity(logins, enterLogin) === true){
+        checkIfLoginExists(logins, enterLogin);
         
-        if(checkIfLoginExists(enterLogin) === false){
-                logins.push(enterLogin);
+        if(checkIfLoginExists(logins, enterLogin) === false){
+                logins.push(logins, enterLogin);
                 alert('Логин успешно добавлен');
             } else {
                 alert('Логин уже существует');
