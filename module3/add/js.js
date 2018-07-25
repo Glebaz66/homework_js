@@ -15,11 +15,18 @@
 // --------------------------------1--------------------------------------
 
 // --------------------------------2--------------------------------------
-function formatString(str) {
-    return console.log(
-        formatString("Curabitur ligula sapien, tincidunt non.")
-      );
+let cutString = (str) => {
+
+    if(str.length > 40){
+        return str.substring(40) + '...'
+    } else {
+        return str
+    } 
 }
 
-    formatString()
+cutString()
+
+    console.log(
+        cutString("Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.")
+      );
 // --------------------------------2--------------------------------------
