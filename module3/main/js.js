@@ -35,7 +35,7 @@ const addLogin = (logins, enterLogin) => {
         checkIfLoginExists(logins, enterLogin);
         
         if(checkIfLoginExists(logins, enterLogin) === false){
-                logins.push(logins, enterLogin);
+                logins.push(enterLogin);
                 alert('Логин успешно добавлен');
             } else {
                 alert('Логин уже существует');
