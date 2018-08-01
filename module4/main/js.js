@@ -36,7 +36,7 @@ const Cashier = function (name, productDatabase, customerMoney = 0){
             }
             return summ;
     }
-    this.countChange = function (totalPrice) {
+    this.countChange = function (total) {
         let summChange = 0;
         if(this.customerMoney < totalPrice){
             return null;
