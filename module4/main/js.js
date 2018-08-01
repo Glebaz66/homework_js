@@ -22,8 +22,8 @@ const Cashier = function (name, productDatabase, customerMoney = 0){
         return this.customerMoney = value;
     }
     this.countTotalPrice = function (order) {
-        let total = 0;
         let summ = 0;
+        let total = 0;
         const a = Object.entries(products);
         const b = Object.entries(order);
             for (el of b) {
@@ -36,25 +36,15 @@ const Cashier = function (name, productDatabase, customerMoney = 0){
             }
             return summ;
     }
-    // this.countChange = function (totalPrice) {
-    //     let summChange = 0;
-    //     if(this.customerMoney < totalPrice){
-    //         return null;
-    //     } else if (this.customerMoney >= totalPrice) {
-    //         return summChange = total - totalPrice;
-    //     } 
-    // } 
-
     this.countChange = function (totalPrice) {
         let summChange = 0;
         if(this.customerMoney < totalPrice){
             return null;
-        }else if (this.customerMoney >= totalPrice) {
-            return summChange = total - totalPrice;
+        } else if (this.customerMoney >= totalPrice) {
+            return summChange = this.customerMoney - totalPrice;
         } 
-    }
-    
-    
+    } 
+
     this.onSuccess = function (changeA) {
         return console.log(`Спасибо за покупку, ваша сдача ${changeA}`);
     }
