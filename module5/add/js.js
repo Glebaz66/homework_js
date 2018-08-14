@@ -121,124 +121,124 @@
 
   // -----------------------------2-------------------------------------
 
-//   const guests = [
-//       { name: "Mango", age: 20, isActive: true },
-//       { name: "Poly", age: 18, isActive: false },
-//       { name: "Ajax", age: 30, isActive: true },
-//       { name: "Chelsey", age: 45, isActive: false }
-//     ];
+  const guests = [
+      { name: "Mango", age: 20, isActive: true },
+      { name: "Poly", age: 18, isActive: false },
+      { name: "Ajax", age: 30, isActive: true },
+      { name: "Chelsey", age: 45, isActive: false }
+    ];
 
-//     const getPropValues = (arr, prop) => arr.map(el => el[prop])
+    const getPropValues = (arr, prop) => arr.map(el => el[prop])
 
-//     console.log(getPropValues (guests, 'name') );
+    console.log(getPropValues (guests, 'name') );
   
-//     console.log( getPropValues(guests, "age") );
+    console.log( getPropValues(guests, "age") );
 
-//     console.log( getPropValues(guests, "isActive") );
+    console.log( getPropValues(guests, "isActive") );
   
 //   // -----------------------------2-------------------------------------
 
 //   // -----------------------------3-------------------------------------
-//  const guests = [
-//      { name: 'Mango', inactiveDays: 15, isActive: true },
-//      { name: 'Poly', inactiveDays: 8, isActive: false },
-//      { name: 'Ajax', inactiveDays: 32, isActive: false },
-//      { name: 'Chelsey', inactiveDays: 85, isActive: true },
-//    ];
+ const guests = [
+     { name: 'Mango', inactiveDays: 15, isActive: true },
+     { name: 'Poly', inactiveDays: 8, isActive: false },
+     { name: 'Ajax', inactiveDays: 32, isActive: false },
+     { name: 'Chelsey', inactiveDays: 85, isActive: true },
+   ];
 
-//   const setGuestState = (guests, period) => {
-//      return guests.map(guest => {
-//          if (guest.inactiveDays > period) {
-//              return {
-//                  ...guest,
-//                  isActive: false,
-//              };
-//          }
+  const setGuestState = (guests, period) => {
+     return guests.map(guest => {
+         if (guest.inactiveDays > period) {
+             return {
+                 ...guest,
+                 isActive: false,
+             };
+         }
 
-//          return {
-//              ...guest,
-//              isActive: true,
-//          };
-//      });
-//  };
+         return {
+             ...guest,
+             isActive: true,
+         };
+     });
+ };
 
 
 
-//     // Вызовы функции для проверки
-//    console.log(
-//      setGuestState(guests, 10)
-//    );
+    // Вызовы функции для проверки
+   console.log(
+     setGuestState(guests, 10)
+   );
   
-//    console.log(
-//      setGuestState(guests, 20)
-//    );
+   console.log(
+     setGuestState(guests, 20)
+   );
   
-//    console.log(
-//      setGuestState(guests, 50)
-//    );
+   console.log(
+     setGuestState(guests, 50)
+   );
 //   // -----------------------------3-------------------------------------
 
 //   // -----------------------------4-------------------------------------
 
-// const guests = [
-//     { name: "Mango", age: 20, isActive: true },
-//     { name: "Poly", age: 18, isActive: false },
-//     { name: "Ajax", age: 30, isActive: true },
-//     { name: "Chelsey", age: 45, isActive: false }
-//   ];
+const guests = [
+    { name: "Mango", age: 20, isActive: true },
+    { name: "Poly", age: 18, isActive: false },
+    { name: "Ajax", age: 30, isActive: true },
+    { name: "Chelsey", age: 45, isActive: false }
+  ];
   
-// const getActiveGuests = (guests) => {
+const getActiveGuests = (guests) => {
     
-// }
+}
 
 //   //  Вызовы функции для проверки
-//   // console.log(getActiveGuests(guests));  массив из 2-х объектов Mango и Ajax
+  // console.log(getActiveGuests(guests));  массив из 2-х объектов Mango и Ajax
 //   // -----------------------------4-------------------------------------
 
 //   // -----------------------------5-------------------------------------
-//  const guests = [
-//      { name: "Mango", age: 20, isActive: true },
-//      { name: "Poly", age: 18, isActive: false },
-//      { name: "Ajax", age: 30, isActive: true },
-//      { name: "Chelsey", age: 45, isActive: false }
-//    ];
+ const guests = [
+     { name: "Mango", age: 20, isActive: true },
+     { name: "Poly", age: 18, isActive: false },
+     { name: "Ajax", age: 30, isActive: true },
+     { name: "Chelsey", age: 45, isActive: false }
+   ];
 
-//    const getGuestsOlderThan = (guests, age) => {
-//        return guests.filter(guest => guest.age > age);
-//    }
-//     // Вызовы функции для проверки
-//    console.log(getGuestsOlderThan(guests, 25));
+   const getGuestsOlderThan = (guests, age) => {
+       return guests.filter(guest => guest.age > age);
+   }
+    // Вызовы функции для проверки
+   console.log(getGuestsOlderThan(guests, 25));
   
-//    console.log(getGuestsOlderThan(guests, 35));
+   console.log(getGuestsOlderThan(guests, 35));
   
-//    console.log(getGuestsOlderThan(guests, 55));
+   console.log(getGuestsOlderThan(guests, 55));
   
 //   // -----------------------------5-------------------------------------
 
 //   // -----------------------------6-------------------------------------
-// const guests = [
-//     { id: 1, name: 'Mango', age: 20 },
-//     { id: 2, name: 'Poly', age: 18 },
-//     { id: 3, name: 'Ajax', age: 30 },
-//     { id: 4, name: 'Chelsey', age: 45 },
-//   ];
+const guests = [
+    { id: 1, name: 'Mango', age: 20 },
+    { id: 2, name: 'Poly', age: 18 },
+    { id: 3, name: 'Ajax', age: 30 },
+    { id: 4, name: 'Chelsey', age: 45 },
+  ];
   
 
-//   const getGuestById = (guests, id) => {
-//       return guests.filter(guest => guest.id === id);
-//   }
-//   //  Вызовы функции для проверки
-//   console.log(
-//     getGuestById(guests, 3)
-//   );
+  const getGuestById = (guests, id) => {
+      return guests.filter(guest => guest.id === id);
+  }
+  //  Вызовы функции для проверки
+  console.log(
+    getGuestById(guests, 3)
+  );
   
-//   console.log(
-//     getGuestById(guests, 1)
-//   );
+  console.log(
+    getGuestById(guests, 1)
+  );
   
-//   console.log(
-//     getGuestById(guests, 5)
-//   );
+  console.log(
+    getGuestById(guests, 5)
+  );
   // -----------------------------6-------------------------------------
 
   // -----------------------------7-------------------------------------
