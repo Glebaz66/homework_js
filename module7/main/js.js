@@ -20,12 +20,12 @@ const posts = [
   ];
   
 const createImg = img => {
-    const img = document.createElement('img');
-    img.classList.add('post__image');
-    img.setAttribute('src', img);
-    img.setAttribute('alt', 'asd');
+    const pic = document.createElement('img');
+    pic.classList.add('post__image');
+    pic.setAttribute('src', img);
+    pic.setAttribute('alt', 'some image');
 
-    return img;
+    return pic;
 }
 
 const createHeading = title => {
@@ -45,27 +45,27 @@ const createPara = text => {
 }
 
 const createLink = link => {
-    const link = document.createElement('a');
-    link.classList.add('button');
-    link.setAttribute('href', link);
-    link.textContent = 'Read more'
+    const linkTo = document.createElement('a');
+    linkTo.classList.add('button');
+    linkTo.setAttribute('href', link);
+    linkTo.textContent = 'Read more'
 
-    return link;
+    return linkTo;
 }
 
-const createPostCard = ({img, title, text, link}) => {
-    const PostCard = document.createElement('div');
-    PostCard.classList.add('post');
+const createPostCards = ({img, title, text, link}) => {
+    const postCard = document.createElement('div');
+    postCard.classList.add('post');
 
-    PostCard.append(createImg(img), createHeading(title), createPara(text), createLink(link));
-
+    postCard.append(createImg(img), createHeading(title), createPara(text), createLink(link));
+    return postCard;
 }
 
 const createCard = posts => {
-    return posts.map(post => createPostCard(post));
+    return posts.map(post => createPostCards(post));
 }
 
 const cards = createCard(posts);
 document.querySelector('.cards').append(...cards);
 
-createPostCard();
+createPostCards();
