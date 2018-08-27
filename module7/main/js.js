@@ -19,13 +19,7 @@ const posts = [
     }
 ];
 
-const createPostCards = ({img, title, text, link}) => {
-    const postCard = document.createElement('div');
-    postCard.classList.add('post');
 
-    postCard.append(createImg(img), createHeading(title), createPara(text), createLink(link));
-    return postCard;
-}
 const createImg = img => {
     const pic = document.createElement('img');
     pic.classList.add('post__image');
@@ -59,6 +53,13 @@ const createLink = link => {
 
     return linkTo;
 }
+const createPostCards = ({img, title, text, link}) => {
+    const postCard = document.createElement('div');
+    postCard.classList.add('post');
+
+    postCard.append(createImg(img), createHeading(title), createPara(text), createLink(link));
+    return postCard;
+}
 
 
 const createCard = posts => {
@@ -68,4 +69,4 @@ const createCard = posts => {
 const cards = createCard(posts);
 document.querySelector('.cards').append(...cards);
 
-createPostCards();
+
