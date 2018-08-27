@@ -3,7 +3,7 @@ const input = noteEditor.querySelector('input');
 const noteList = document.querySelector('.note-list');
 
 noteEditor.addEventListener('submit', handleSubmit);
-noteList.addEventListener('click', handleNoteListClick)
+noteList.addEventListener('click', handleNoteListClick);
 
 
 function handleSubmit(evt){
@@ -14,7 +14,7 @@ function handleSubmit(evt){
     const markup = createNoteMarkup(text);
     // console.log(markup);
 
-    noteList.insertAdjacentHTML('afterbegin', markup)
+    noteList.insertAdjacentHTML('afterbegin', markup);
     noteEditor.reset();
 }
 
