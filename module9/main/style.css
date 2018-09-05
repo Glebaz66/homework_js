@@ -1,0 +1,23 @@
+body {
+  overflow: hidden;
+}
+.image-gallery {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+li {
+  list-style: none;
+}
+.preview {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  width: 89%;
+}
+.preview img {
+  border: 2px solid transparent;
+}
+.preview .clickElem {
+  border: 2px solid rgba(255, 151, 151, 0.867);
+}
