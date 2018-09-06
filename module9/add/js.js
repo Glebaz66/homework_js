@@ -50,59 +50,98 @@
 // --------------------2--------------------
 
 // --------------------3--------------------
-const startBtn = document.querySelector('.js-timer-start');
-const stopBtn = document.querySelector('.js-timer-stop');
-const clockface = document.querySelector('.js-clockface');
-const clearBtn = document.querySelector('.js-timer-clear');
-// const pauseBtn = document.querySelector('.js-timer-pause');
+// const startBtn = document.querySelector('.js-timer-start');
+// const stopBtn = document.querySelector('.js-timer-stop');
+// const clockface = document.querySelector('.js-clockface');
+// const clearBtn = document.querySelector('.js-timer-clear');
+// // const pauseBtn = document.querySelector('.js-timer-pause');
 
-const timer = {
-    id: null,
-    startTime: null,
-    isActite: false,
-    start(){
-        if(this.isActite) return;
+// const timer = {
+//     id: null,
+//     startTime: null,
+//     isActite: false,
+//     start(){
+//         if(this.isActite) return;
 
-        this.isActite = true;
+//         this.isActite = true;
 
-        this.startTime = Date.now();
+//         this.startTime = Date.now();
             
-        this.id = setInterval(() => {
-            const currentTime = Date.now();
-            const deltaTime = currentTime - this.startTime;
-            updateClockface(deltaTime);
-        }, 100); 
-    },
-    stop(){
-        // console.log('stop');
-        clearInterval(this.id);
-    },
-    clear(){
-        const cleared = this.startTime = '00:00.0';
-        clockface.textContent = cleared;
-        // console.log(cleared);
-    },
-    // pause(){
-    //     const onPause = Date.now() - deltaTime;
-    //     clockface.textContent = onPause;
-    // },
-};
+//         this.id = setInterval(() => {
+//             const currentTime = Date.now();
+//             const deltaTime = currentTime - this.startTime;
+//             updateClockface(deltaTime);
+//         }, 100); 
+//     },
+//     stop(){
+//         // console.log('stop');
+//         clearInterval(this.id);
+//     },
+//     clear(){
+//         const cleared = this.startTime = '00:00.0';
+//         clockface.textContent = cleared;
+//         // console.log(cleared);
+//     },
+//     // pause(){
+//     //     const onPause = Date.now() - deltaTime;
+//     //     clockface.textContent = onPause;
+//     // },
+// };
 
-startBtn.addEventListener('click', timer.start.bind(timer));
-stopBtn.addEventListener('click', timer.stop.bind(timer));
-clearBtn.addEventListener('click', timer.clear.bind(timer));
-// pauseBtn.addEventListener('click', timer.pause.bind(timer));
+// startBtn.addEventListener('click', timer.start.bind(timer));
+// stopBtn.addEventListener('click', timer.stop.bind(timer));
+// clearBtn.addEventListener('click', timer.clear.bind(timer));
+// // pauseBtn.addEventListener('click', timer.pause.bind(timer));
 
-function updateClockface (time) {
-    const formattedTime = formatTime(time)
-    clockface.textContent = formattedTime;
-}
-function formatTime(time) {
-    let date = new Date(time);
+// function updateClockface (time) {
+//     const formattedTime = formatTime(time)
+//     clockface.textContent = formattedTime;
+// }
+// function formatTime(time) {
+//     let date = new Date(time);
 
-    const min = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
-    const sec = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
-    const msec = String(date.getMilliseconds());
-    return `${min}:${sec}.${msec[0]}`
-  }
+//     const min = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
+//     const sec = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
+//     const msec = String(date.getMilliseconds());
+//     return `${min}:${sec}.${msec[0]}`
+//   }
 // --------------------3--------------------
+
+// --------------------4--------------------
+// const DELAY = 1000;
+
+// let goodsAmount = 100;
+
+// const processOrder = (amount) => {
+//      return new Promise((res, rej) => {
+//         setTimeout(() => {
+//             if(amount > goodsAmount) {
+//                 return rej('К сожалению на складе не достаточно товаров!');
+//             }
+//             if(!Number(amount)){
+//                 return rej('Некоректный ввод!');
+//             }
+//             if(amount < goodsAmount){
+//                 return res('Ваш заказ готов!');
+//             }
+//         }, 1000)
+//     });
+// }
+
+// // Вызовы функции для проверки
+// processOrder(50)
+//   .then(x => console.log(x)) // Ваш заказ готов!
+//   .catch(err => console.log(err));
+
+// processOrder(50)
+//   .then(x => console.log(x)) // Ваш заказ готов!
+//   .catch(err => console.log(err));
+
+// processOrder(50)
+//   .then(x => console.log(x)) // К сожалению на складе недостаточно товаров!
+//   .catch(err => console.log(err));
+
+// processOrder("qwe")
+//   .then(x => console.log(x))
+//   .catch(err => console.log(err)); // Некоректный ввод!
+// --------------------4--------------------
