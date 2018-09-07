@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #5f9da7;
+}
+.stopwatch {
+    margin: 0 auto;
+    background-color: rgb(143, 6, 255);
+    padding: 10px;
+    width: 332px;
+    border: 1px solid #0a450a;
+}
+.time {
+    width: 310px;
+    font-size: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    font-family: 'Impact';
+    box-shadow: 1px 1px 1px #000;
+}
+.control {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn {
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    color: #fff5f5;
+    background-color: rgb(255, 136, 40);
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.btn:hover {
+    box-shadow: 1px 1px 7px #a53737;
+}
+.laps {
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: #000;
+    width: 26%;
+    text-align: center;
+    margin: 0 auto;
+}
+.laps__item {
+    list-style: none;
+    color: #a53737;
+    font-size: 20px;
+    padding: 3px;
+    border: 1px solid #fff5f5;
+}
