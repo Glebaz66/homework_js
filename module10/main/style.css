@@ -1,0 +1,8 @@
+.list-users {
+    display: none;
+    text-align: center;
+    border: 1px solid #d4d4d4; 
+}
+.list-users-row:nth-child(2n+2) {
+    background-color: #d4d4d4;
+}

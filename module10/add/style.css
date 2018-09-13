@@ -49,7 +49,7 @@ border-bottom: 2px solid #00796b;
     color: #616161;
 
 }
-img {
+.image{
     width: 50px;
     height: 50px;
 }
@@ -57,4 +57,18 @@ img {
     width: 400px;
     margin: 0 auto;
     background-color: rgb(125, 255, 93);
+    text-align: center;
+}
+.ava {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+.user,
+.bio,
+.ava {
+    margin-bottom: 10px;
+}
+.repo {
+    padding-bottom: 10px;
 }
