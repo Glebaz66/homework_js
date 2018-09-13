@@ -81,11 +81,7 @@ function fetchUsers(evt) {
     fetch('https://test-users-api.herokuapp.com/users/')
 
     .then(responce => {
-        if(responce.ok) {
-            console.log(responce);
-        }return responce.json();
-            
-        
+        if(responce.ok) {return responce.json()};
         throw new Error('fetch error');
     })
 
