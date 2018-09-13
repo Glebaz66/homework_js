@@ -1,8 +1,14 @@
-.list-users {
-    display: none;
-    text-align: center;
-    border: 1px solid #d4d4d4; 
+.list-users-item {
+    background-color: #ededed;
+    height: 50px;
+    text-transform: uppercase;
 }
 .list-users-row:nth-child(2n+2) {
     background-color: #d4d4d4;
+}
+table {
+    display: none;
+    text-align: center;
+    margin: 40px auto 0;
+    
 }

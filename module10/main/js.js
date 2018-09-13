@@ -5,7 +5,7 @@ const deleteUser = document.querySelector('.js-delete-user');
 const updateUser = document.querySelector('.js-update-user');
 
 const result = document.querySelector('.list-users');
-
+const table = document.querySelector('table');
 function getUsersList(evt){
     evt.preventDefault();
 
@@ -24,15 +24,12 @@ function getUsersList(evt){
             <td>${elem.id}</td>
         </tr>
         `, '')
-        result.innerHTML += `${usersListData}`;
+        result.innerHTML = `${usersListData}`;
+        table.style.display = 'block';
     })
     .catch(error => {
         console.log('error2', error);
     })
 }
-
-// onclick (usersList) => {
-    
-// }
 
 usersList.addEventListener('click', getUsersList);
