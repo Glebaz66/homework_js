@@ -12,3 +12,7 @@ table {
     margin: 40px auto 0;
     
 }
+.user-id {
+    display: flex;
+    flex-flow: column wrap;
+}
