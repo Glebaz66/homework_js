@@ -16,3 +16,6 @@ table {
     display: flex;
     flex-flow: column wrap;
 }
+a {
+    width: 100px;
+}
