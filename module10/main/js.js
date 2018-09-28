@@ -8,6 +8,8 @@ const result = document.querySelector('.list-users');
 const table = document.querySelector('table');
 const input = document.querySelector('input');
 
+usersList.addEventListener('click', getAllUsers);
+userId.addEventListener('click', getUserById);
 
 function getAllUsers(evt){
     evt.preventDefault();
@@ -47,9 +49,12 @@ function getUserById(evt){
     })
     .then(data => {
         // console.log(data.data[0].id);
+        console.log(data.data.name);
         
         const inputValue = input.value;
-        const id = data.data.find(elem => elem.id === inputValue);
+        const id = data.data.find(elem => elem.id || elem.id == elem.name === inputValue);
+        console.log(id);
+        
         const userId = document.querySelector('.user-id');
         console.log('id',id.id);
         if(inputValue == id) {
@@ -61,5 +66,4 @@ function getUserById(evt){
         
     })
 }
-usersList.addEventListener('click', getAllUsers);
-userId.addEventListener('click', getUserById);
+
