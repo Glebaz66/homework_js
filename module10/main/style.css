@@ -1,24 +1,51 @@
-.list-users-item {
-    background-color: #ededed;
-    height: 50px;
-    text-transform: uppercase;
+body {
+    font-family: 'Mali', cursive;
 }
-.list-users-row:nth-child(2n+2) {
-    background-color: #d4d4d4;
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column nowrap;
 }
-table {
+.all-users,
+.add-user,
+.remove-user,
+.udate-user {
+    margin-bottom: 30px;
+}
+.button {
+    background: none;
+    padding: 5px 20px;
+    background-color: aquamarine;
+    border: 2px solid #000000;
+    font-family: 'Mali', cursive;
+    font-size: 15px;
+
+}
+.result-all-users {
     display: none;
-    text-align: center;
-    margin: 40px auto 0;
-    
+    margin-top: 20px;
+    width: 41%;
 }
-.user-id {
-    display: none;
-    flex-flow: column wrap;
-    width: 200px;
-    background-color: red;
-    height: 20px;
+.list-row {
+    border: 1px solid #000;
 }
-a {
-    width: 100px;
+.list-row:nth-of-type(2n+1) {
+    background-color: rgb(217, 251, 255);
+}
+.list-item {
+    border: 1px solid #000;
+}
+.result-user-by-id {
+    /* background-color: aquamarine; */
+}
+.user-id-list {
+    list-style: none;
+    padding: 0;
+}
+.user-id-list-item {
+    padding: 15px 0;
+}
+.bold {
+    font-weight: 900;
 }
