@@ -106,7 +106,7 @@ const refs = {
         method: 'POST',
         body: JSON.stringify({
           name: `${refs.inputNewName.value}`,
-          age: `${refs.inputNewAge.value}`
+          age: `${refs.inputNewAge.value}`,
         }),
         headers: {
           Accept: 'application/json',
