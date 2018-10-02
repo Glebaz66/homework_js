@@ -1,11 +1,14 @@
 {
   "name": "add",
   "version": "1.0.0",
-  "description": "",
-  "main": "js.js",
+  "description": "asd",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production"
+    "build": "webpack --mode prodution"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "asd",
+  "license": "ISC",
+  "dependencies": {
+    "native": "^0.3.3"
+  }
 }
