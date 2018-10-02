@@ -43,9 +43,9 @@ const refs = {
   }) {
     return `
       <tr class="list-row">
-      <td class="list-item">${id}</td>
-      <td class="list-item">${name}</td>
-      <td class="list-item">${age}</td>
+        <td class="list-item">${id}</td>
+        <td class="list-item">${name}</td>
+        <td class="list-item">${age}</td>
       </tr>
       `;
   }
@@ -131,15 +131,18 @@ const refs = {
     const user = arr.find(el => el.id === refs.inputRemoveUser.value);
   
     if (user === undefined) {
-      refs.resultRemoveUser.textContent = `User ${refs.inputRemoveUser.value} isn't found`;
+      refs.resultRemoveUser.textContent = `Пользователь ${refs.inputRemoveUser.value} не найден`;
+      document.querySelector('.result-remove-user').style.background = 'red';
+      // refs.resultRemoveUser.style.color = 'red';
     } else {
-      fetchRemoveUser();
-      updateAfterRemoving();
+        fetchRemoveUser();
+        updateAfterRemoving();
     }
-  }
-  
-  function updateAfterRemoving() {
+}
+
+function updateAfterRemoving() {
     refs.resultRemoveUser.textContent = `User ${refs.inputRemoveUser.value} successfully deleted`;
+    document.querySelector('.result-remove-user').style.background = 'green';
   }
   
   function fetchRemoveUser() {
@@ -165,9 +168,11 @@ const refs = {
   
     if (user === undefined) {
       refs.resultUpdate.textContent = `User ${refs.inputUpdateId.value} isn't found`;
+      document.querySelector('.result-update').style.background = 'red';
     } else {
       fetchUpdate();
       updateUser();
+      document.querySelector('.result-update').style.background = 'green';
     }
   }
   

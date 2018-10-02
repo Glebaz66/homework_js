@@ -36,8 +36,12 @@ body {
 .list-item {
     border: 1px solid #000;
 }
-.result-user-by-id {
-    /* background-color: aquamarine; */
+.result-user-by-id,
+.result-new-user,
+.result-remove-user,
+.result-update {
+    margin: 15px 0;
+    width: 30%;
 }
 .user-id-list {
     list-style: none;
@@ -48,4 +52,7 @@ body {
 }
 .bold {
     font-weight: 900;
+}
+.visible {
+    display: block;
 }
