@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet"> 
     <link rel="stylesheet" href="style.css">
+    <title>Module-10</title>
 </head>
 <body>
-    <form>
-        <input type="text" name="users" placeholder="Enter user ID">
-        <button class="btn js-get-users-list">get user</button>
-        <button class="btn js-get-user-id">get user by id</button>
-        <button class="btn js-create-user">create user</button>
-        <button class="btn js-delete-user">delete user</button>
-        <button class="btn js-update-user">update user</button>
-    </form>
-    <table>
-        <thead>
-            <tr class="list-users-row">
-                <td class="list-users-item">age</td>
-                <td class="list-users-item">name</td>
-                <td class="list-users-item">id</td>
-            </tr>
-        </thead>
-        <tbody class="list-users"></tbody>
-    </table>
-    <div class="user-id"></div>
+    <div class="wrapper">
+        <div class="all-users">
+            <form class="js-all-users" action="#">
+                <button class="button js-btn-all-users" type="submit">Get all users</button>
+            </form>
+            <table class="result-all-users"></table>
+        </div>
+        <div>
+            <form class="js-user-by-id" action="#">
+                <input class="user-by-id" type="text" name="id" placeholder="Enter user id" required>
+                <button class="button js-btn-user-by-id" type="submit">Get user by ID</button>
+            </form>
+            <div class="result-user-by-id"></div>
+        </div>
+        <div class="add-user">
+            <form class="js-add-user" action="#">
+                <input class="new-name" type="text" name="name" placeholder="Enter new user name" required>
+                <input class="new-age" type="number" name="age" placeholder="Enter new user age" required>
+                <button class="button" type="submit">Add new user</button>
+                <div class="result-new-user"></div>
+            </form>
+        </div>
+        <div class="remove-user">
+            <form class="js-remove-user" action="#">
+                <input class="id-remove" type="text" name="id" placeholder="Enter user id" required>
+                <button class="button" type="submit">Remove user by ID</button>
+                <div class="result-remove-user"></div>
+            </form>
+        </div>
+        <div class="udate-user">
+            <form class="js-update-user" action="#">
+                <input class="input-update-id" type="text" name="id" placeholder="Enter user id" required>
+                <input class="input-update-name" type="text" name="name" placeholder="Enter update name" required>
+                <input class="input-update-age" type="text" name="age" placeholder="Enter update age" required>
+                <button class="button" type="submit">Update user</button>
+                <div class="result-update"></div>
+            </form>
+        </div>
+    </div>
     <script src="js.js"></script>
 </body>
 </html>
