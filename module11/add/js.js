@@ -11,17 +11,51 @@
 // document.querySelector('.listRoot').insertAdjacentHTML('afterbegin', markup) ;
 // -------------------------------------1---------------------------------------
 // -------------------------------------2---------------------------------------
-const posts = [
-    { title: "post 1", text: "text 1", isFav: true },
-    { title: "post 2", text: "text 2", isFav: false },
-    { title: "post 3", text: "text 3", isFav: true },
-    { title: "post 4", text: "text 4", isFav: false }
-  ];
-const postsData = document.querySelector('.post').innerHTML.trim();
-const postTmp = Handlebars.compile(postsData);
-const postMarkup = posts.reduce((acc, post) => acc + postTmp(post), '');
-document.querySelector('.post-root').innerHTML = postMarkup;
+// const posts = [
+//     { title: "post 1", text: "text 1", isFav: true },
+//     { title: "post 2", text: "text 2", isFav: false },
+//     { title: "post 3", text: "text 3", isFav: true },
+//     { title: "post 4", text: "text 4", isFav: false }
+//   ];
+// const postsData = document.querySelector('.post').innerHTML.trim();
+// const postTmp = Handlebars.compile(postsData);
+// const postMarkup = posts.reduce((acc, post) => acc + postTmp(post), '');
+// document.querySelector('.post-root').innerHTML = postMarkup;
 // -------------------------------------2---------------------------------------
 // -------------------------------------3---------------------------------------
-// -------------------------------------3---------------------------------------
+const pattern = /^(([а-яА-Я])+([а-яА-Я]))/gm;
 
+const firstname = document.getElementById("first_name");
+const lastname = document.getElementById("last_name");
+const submitBtn = document.getElementById("submit-btn");
+
+
+const validResult = {
+  firstName: null,
+  lastName: null,
+};
+
+function validate(evt) {
+  evt.preventDefault();
+  
+  // document.querySelector('.results').insertAdjacentHTML('afterbegin', result);
+  // console.log(/^(([а-яА-Я])+([а-яА-Я]))/gm.test(firstname.value));
+  
+  if(pattern.test(firstname.value)){
+    validResult.firstName = true;
+  } else {
+    validResult.firstName = false;
+  }
+
+  console.log((pattern.test(lastname.value)));
+  
+  if(pattern.test(lastname.value)){
+    validResult.lastName = true;
+  } else {
+    validResult.lastName = false;
+  }
+  return  console.log(validResult);
+}
+
+submitBtn.addEventListener("click", validate);
+// -------------------------------------3---------------------------------------
