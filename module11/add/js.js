@@ -23,16 +23,17 @@
 // document.querySelector('.post-root').innerHTML = postMarkup;
 // -------------------------------------2---------------------------------------
 // -------------------------------------3---------------------------------------
-const pattern = /^(([а-яА-Я])+([а-яА-Я]))/gm;
+const pattern = /^(([а-яА-Я])+([а-яА-Я]))/gmi;
+// const pattern2 = /(([а-яА-Я]))/gmi;
 
-const firstname = document.getElementById("first_name");
-const lastname = document.getElementById("last_name");
-const submitBtn = document.getElementById("submit-btn");
+const firstName = document.querySelector('#first_name');
+const lastName = document.querySelector('#last_name');
+const submitBtn = document.querySelector('#submit-btn');
 
 
 const validResult = {
-  firstName: null,
-  lastName: null,
+  first_name: false,
+  last_name: false,
 };
 
 function validate(evt) {
@@ -40,22 +41,25 @@ function validate(evt) {
   
   // document.querySelector('.results').insertAdjacentHTML('afterbegin', result);
   // console.log(/^(([а-яА-Я])+([а-яА-Я]))/gm.test(firstname.value));
+  console.log('firstname true1', pattern.test(firstName.value));
   
-  if(pattern.test(firstname.value)){
-    validResult.firstName = true;
+  if(pattern.test(firstName.value) == true){
+    validResult.first_name = true;
   } else {
-    validResult.firstName = false;
+    validResult.first_name = false;
   }
-
-  console.log((pattern.test(lastname.value)));
+  console.log('firstname value1', firstName.value);
   
-  if(pattern.test(lastname.value)){
-    validResult.lastName = true;
+  console.log('lastname true2', pattern.test(lastName.value));
+  if(pattern.test(lastName.value == true)){
+    validResult.last_name = true;
   } else {
-    validResult.lastName = false;
+    validResult.last_name = false;
   }
-  return  console.log(validResult);
+  console.log('lastname value2', lastName.value);
+  return console.log(validResult);
 }
 
 submitBtn.addEventListener("click", validate);
+
 // -------------------------------------3---------------------------------------
