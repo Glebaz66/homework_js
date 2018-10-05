@@ -1,0 +1,28 @@
+form {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.categoty {
+    margin: 0 30px;
+}
+.categoty-list {
+    list-style: none;
+    padding: 0;
+}
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+.products-card {
+    border: 1px solid #0000003f;
+    margin: 5px;
+    box-shadow: 1px 1px 5px #000000;
+}
+.products-item {
+  width: 95%;
+  list-style: none;
+}
