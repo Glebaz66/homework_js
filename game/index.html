@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Memory Game</title>
-
+  <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet"> 
   <link rel="stylesheet" href="./stl.css">
 </head>
 <body>
+    <section class="header">
+        <h1 class="header-text">Find two similar charachters</h1>
+    </section>
   <section class="memory-game">
     <div class="memory-card" data-framework="homer">
       <img class="front-face" src="./img/homer.png" alt="homer" />
@@ -54,19 +58,19 @@
       <img class="back-face" src="./img/Bullseye-Gradient.svg" alt="cover" />
     </div>
 
-    <div class="memory-card" data-framework="hypnofrog">
-      <img class="front-face" src="./img/hypnofrog.png" alt="hypnofrog" />
+    <div class="memory-card" data-framework="hypnotoad">
+      <img class="front-face" src="./img/hypnotoad.png" alt="hypnotoad" />
       <img class="back-face" src="./img/Bullseye-Gradient.svg" alt="cover" />
     </div>
-    <div class="memory-card" data-framework="hypnofrog">
-      <img class="front-face" src="./img/hypnofrog.png" alt="hypnofrog" />
+    <div class="memory-card" data-framework="hypnotoad">
+      <img class="front-face" src="./img/hypnotoad.png" alt="hypnotoad" />
       <img class="back-face" src="./img/Bullseye-Gradient.svg" alt="cover" />
     </div>
   </section>
 
-  <div class="control">
+  <section class="control">
       <button class="btn btn-hover color reset" type="reset">Restart game</button>
-  </div>
+  </section>
 
   <script src="./scr.js"></script>
 </body>
