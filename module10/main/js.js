@@ -34,6 +34,10 @@ const refs = {
     const htmlString = arr.reduce((acc, user) => acc + createTableRow(user), "");
     refs.tBody.innerHTML = htmlString;
     document.querySelector('.result-all-users').style.display = 'block';
+    
+    console.log(updateView);
+    console.log(arr);
+    console.log(htmlString);
   }
   
   function createTableRow({

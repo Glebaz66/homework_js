@@ -98,10 +98,10 @@ const refs = {
     template: document.querySelector('.js-template'),
     reset: document.querySelector('button[type=reset]'),
 }
-console.log(refs.reset);
+// console.log(refs.reset);
 
 
-const filter = {
+let filter = {
     size: [],
     color: [],
     release_date: [],
@@ -129,15 +129,14 @@ const handleSizeForm = (evt) => {
     const markup = filtered.reduce((acc, el) => acc + template(el),'');
     
     refs.result.innerHTML = markup;
+    console.log(source);
   }
   
   const clear = (evt) => {
     evt.preventDefault(); 
-
-        return alert('123');
-    
+    window.location.reload();
   }
-  console.log(clear);
+  // console.log(clear);
 
 refs.filterForm.addEventListener('submit', handleSizeForm);
 refs.reset.addEventListener('onclick', clear);
