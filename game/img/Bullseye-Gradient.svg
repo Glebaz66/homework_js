@@ -1,0 +1,10 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='100px' height='120px;' viewBox='0 0 1200 1200'>
+<rect fill='#a000d0' width='400' height='400'/>
+<g><circle fill='#000000' cx='400' cy='400' r='600'/>
+<circle fill='#180d1c' cx='400' cy='400' r='500'/>
+<circle fill='#261431' cx='400' cy='400' r='400'/>
+<circle fill='#351947' cx='400' cy='400' r='300'/>
+<circle fill='#451e5e' cx='400' cy='400' r='200'/>
+<circle fill='#552277' cx='400' cy='400' r='100'/>
+</g>
+</svg>

@@ -1,4 +1,5 @@
 const cards = document.querySelectorAll('.memory-card');
+const restart = document.querySelector('button[type=reset]')
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -27,6 +28,10 @@ function checkForMatch() {
   isMatch ? disableCards() : unflipCards();
 }
 
+function resetBoard() {
+    [hasFlippedCard, lockBoard] = [false, false];
+    [firstCard, secondCard] = [null, null];
+  }
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
@@ -45,10 +50,7 @@ function unflipCards() {
   }, 1000);
 }
 
-function resetBoard() {
-  [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
-}
+
 
 (function shuffle() {
   cards.forEach(card => {
@@ -57,4 +59,9 @@ function resetBoard() {
   });
 })();
 
+restartBtn = () => {
+    window.location.reload();
+}
+
 cards.forEach(card => card.addEventListener('click', flipCard));
+restart.addEventListener('click', restartBtn);
