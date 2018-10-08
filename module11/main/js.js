@@ -114,6 +114,9 @@ const handleSizeForm = (evt) => {
       const name = el.getAttribute('name');
       const ternNumb = name == 'color' ? el.value : Number(el.value);
       el.checked ? filter[name].push(ternNumb) : acc;
+      console.log(name);
+      
+      // filter[name] == filter[name] ? filter[name].pop(ternNumb) : acc;
     }, '');
     
     const filtered =  Object.keys(filter).reduce((acc,key) => {
@@ -129,7 +132,6 @@ const handleSizeForm = (evt) => {
     const markup = filtered.reduce((acc, el) => acc + template(el),'');
     
     refs.result.innerHTML = markup;
-    console.log(source);
   }
   
   const clear = (evt) => {
