@@ -101,44 +101,92 @@ const refs = {
 // console.log(refs.reset);
 
 
-let filter = {
-    size: [],
-    color: [],
-    release_date: [],
-}
+// let filter = {
+//     size: [],
+//     color: [],
+//     release_date: [],
+// }
+// где-то здесь жопа
+// const handleSizeForm = (evt) => {
+//     evt.preventDefault();
+    
+//     Array.from(refs.checkboxes).reduce((acc, el) => {
+//       const name = el.getAttribute('name');
+//       const ternNumb = name == 'color' ? el.value : Number(el.value);
+//       el.checked ? filter[name].push(ternNumb) : acc;
+//       console.log(name);
+//     }, '');
+    
+//     const filtered =  Object.keys(filter).reduce((acc,key) => {
+//       if(filter[key].length) {
+//         return  acc.filter(el => filter[key].includes(el[key]))
+//       }
+//       return acc;
+//     }, laptops);
+    
+//     // console.log(filtered);
+//     const source = refs.template.innerHTML.trim();
+//     const template = Handlebars.compile(source);
+//     const markup = filtered.reduce((acc, el) => acc + template(el),'');
+    
+//     refs.result.innerHTML = markup;
+//   }
+  
+//   const clear = (evt) => {
+//     evt.preventDefault(); 
+//     window.location.reload();
+//   }
+//   // console.log(clear);
+
+// refs.filterForm.addEventListener('submit', handleSizeForm);
+// refs.reset.addEventListener('onclick', clear);
+// console.log(refs);
+
+// console.log(refs.reset);
+
+
+let filter = {}
+
 
 const handleSizeForm = (evt) => {
-    evt.preventDefault();
-    
-    Array.from(refs.checkboxes).reduce((acc, el) => {
-      const name = el.getAttribute('name');
-      const ternNumb = name == 'color' ? el.value : Number(el.value);
-      el.checked ? filter[name].push(ternNumb) : acc;
-      console.log(name);
-      
-      // filter[name] == filter[name] ? filter[name].pop(ternNumb) : acc;
-    }, '');
-    
-    const filtered =  Object.keys(filter).reduce((acc,key) => {
-      if(filter[key].length) {
-        return  acc.filter(el => filter[key].includes(el[key]))
-      }
-      return acc;
-    }, laptops);
-    
-    // console.log(filtered);
-    const source = refs.template.innerHTML.trim();
-    const template = Handlebars.compile(source);
-    const markup = filtered.reduce((acc, el) => acc + template(el),'');
-    
-    refs.result.innerHTML = markup;
+  filter = {
+      size: [],
+      color: [],
+      release_date: [],
   }
+  evt.preventDefault();
   
-  const clear = (evt) => {
-    evt.preventDefault(); 
-    window.location.reload();
-  }
-  // console.log(clear);
+  Array.from(refs.checkboxes).reduce((acc, el) => {
+    const name = el.getAttribute('name');
+    const ternNumb = name == 'color' ? el.value : Number(el.value);
+    el.checked ? filter[name].push(ternNumb) : acc;
+    console.log(name);
+    
+    // filter[name] == filter[name] ? filter[name].pop(ternNumb) : acc;
+  }, '');
+  
+
+  let filtered = Object.keys(filter).reduce((acc,key) => {
+    if(filter[key].length) {
+      return  acc.filter(el => filter[key].includes(el[key]))
+    }
+    return acc;
+  }, laptops);
+  
+  
+  const source = refs.template.innerHTML.trim();
+  const template = Handlebars.compile(source);
+  const markup = filtered.reduce((acc, el) => acc + template(el),'');
+  
+  refs.result.innerHTML = markup;
+
+
+}
+
+const clear = (evt) => {
+  window.location.reload();
+}
+// console.log(clear);
 
 refs.filterForm.addEventListener('submit', handleSizeForm);
 refs.reset.addEventListener('onclick', clear);
