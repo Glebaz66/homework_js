@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll('.card');
 const restart = document.querySelector('button[type=reset]')
 
 let hasFlippedCard = false;
@@ -23,7 +23,7 @@ function flipCard() {
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+  let isMatch = firstCard.dataset.char === secondCard.dataset.char;
 
   isMatch ? disableCards() : unflipCards();
 }

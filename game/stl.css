@@ -5,8 +5,7 @@
 }
 
 body {
-  height: 100vh;
-  background: #060ab2;
+  background: #41da6d;
   font-family: 'Krub', sans-serif;
 }
 
@@ -21,7 +20,7 @@ body {
     text-shadow: 1px 1px 1px rgb(255, 21, 255);
     text-transform: uppercase;
 }
-.memory-game {
+.wrap {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -32,7 +31,7 @@ body {
   perspective: 2000px;
 }
 
-.memory-card {
+.card {
   width: calc(25% - 10px);
   height: calc(25.333% - 10px);
   margin: 5px;
@@ -42,31 +41,31 @@ body {
   transition: transform 0.5s;
 }
 
-.memory-card:active {
+.card:active {
     transform: scale(0.97);
     transition: transform 0.2s;
 }
 
-.memory-card.flip {
+.card.flip {
     transform: rotateY(180deg);
 }
 
-.front-face,
-.back-face {
+.front,
+.back {
   height: 100%;
   padding: 20px;
   position: absolute;
   border-radius: 5px;
-  background: #1c7ccc;
+  background: #b9f05c;
   backface-visibility: hidden;
   border: none;
 }
-.back-face {
+.back {
     padding: 0;
     width: 100%;
 }
 
-.front-face {
+.front {
     transform: rotateY(180deg);
     width: 50%;
 }
