@@ -3,12 +3,10 @@
   margin: 0;
   box-sizing: border-box;
 }
-
 body {
   background: #41da6d;
   font-family: 'Krub', sans-serif;
 }
-
 .header {
     padding-top: 60px;
     display: flex;
@@ -30,7 +28,6 @@ body {
   margin: auto;
   perspective: 2000px;
 }
-
 .card {
   width: calc(25% - 10px);
   height: calc(25.333% - 10px);
@@ -40,12 +37,10 @@ body {
   transform-style: preserve-3d;
   transition: transform 0.5s;
 }
-
 .card:active {
     transform: scale(0.97);
     transition: transform 0.2s;
 }
-
 .card.flip {
     transform: rotateY(180deg);
 }
@@ -64,12 +59,10 @@ body {
     padding: 0;
     width: 100%;
 }
-
 .front {
     transform: rotateY(180deg);
     width: 50%;
 }
-
 .control {
   display: flex;
   justify-content: center;
@@ -91,31 +84,20 @@ body {
   background-size: 300% 100%;
 
   border-radius: 50px;
-  moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .btn-hover:hover {
   background-position: 100% 0;
-  moz-transition: all 0.4s ease-in-out;
   -o-transition: all 0.4s ease-in-out;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
-
 .btn-hover:focus {
   outline: none;
 }
-
 .btn-hover.color {
-  background-image: linear-gradient(
-    to right,
-    #29323c,
-    #83b2e6,
-    #2b5876,
-    #4e4376
-  );
+  background-image: linear-gradient(to right,#29323c,#83b2e6,#2b5876,#4e4376);
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
