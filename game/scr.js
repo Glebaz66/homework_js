@@ -61,6 +61,10 @@ function unflipCards() {
 
 restartBtn = () => {
     window.location.reload();
+    // document.querySelector('.card.flip');
+    // if(firstCard.nodeName || secondCard.classList == 'flip'){
+    //   resetBoard();
+    // }
 }
 
 cards.forEach(card => card.addEventListener('click', flipCard));
