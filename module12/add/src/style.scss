@@ -1,0 +1,17 @@
+$color: red;
+body {
+    background: $color;
+    &::after {
+        font-size: 13px;
+    }
+}
+div {
+    color: rebeccapurple;
+    width: 20px;
+    &__one {
+        text-align: center;
+        &::before{
+            content: '';
+        }
+    }
+}
