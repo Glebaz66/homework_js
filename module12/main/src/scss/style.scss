@@ -1,0 +1,16 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+
+    input {
+        width: 300px;
+    }
+
+    button[type=submit] {
+        padding: 20px 40px;
+    }
+
+    .card-wrap {
+        width: 50%;
+    }
+}

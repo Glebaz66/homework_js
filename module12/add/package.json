@@ -20,7 +20,6 @@
     "@babel/preset-env": "^7.1.0",
     "babel-cli": "^6.26.0",
     "cssnano": "^4.1.4",
-    "html-minifier": "^3.5.20",
     "node-sass": "^4.9.3",
     "postcss-cli": "^6.0.0"
   }
