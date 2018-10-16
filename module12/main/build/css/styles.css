@@ -374,3 +374,45 @@ template {
 [hidden] {
   display: none;
 }
+
+.form {
+  padding-top: 40px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 800px;
+  margin: 0 auto;
+  border: 1px solid silver;
+  padding: 10px 20px;
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.card li {
+  margin-bottom: 10px;
+}
+
+.card-img {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 400px;
+}
+
+.wrap-btn {
+  text-align: center;
+}
+
+.card-btn {
+  width: 200px;
+  border: 1px solid silver;
+  background-color: #fff;
+}
+
+.card-btn:hover {
+  border: 1px solid black;
+}
