@@ -382,7 +382,7 @@ template {
 }
 
 .card {
-  width: 800px;
+  width: 60%;
   margin: 0 auto;
   border: 1px solid silver;
   padding: 10px 20px;
@@ -390,17 +390,18 @@ template {
   line-height: 25px;
   margin-bottom: 10px;
   list-style: none;
+  background: #ffcfcf;
 }
 
-.card li {
+.card li:not(:last-child) {
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .card-img {
   display: block;
   margin: 0 auto;
   text-align: center;
-  width: 400px;
 }
 
 .wrap-btn {
@@ -415,4 +416,9 @@ template {
 
 .card-btn:hover {
   border: 1px solid black;
+}
+
+body {
+  background: #f3d6d680;
+  font-family: 'Roboto', sans-serif;
 }

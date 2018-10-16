@@ -1,4 +1,3 @@
-"use strict";
 'use strict';
 
 var template = document.querySelector('.js-template');

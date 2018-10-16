@@ -32,9 +32,9 @@ gulp.task('html', () =>
     .pipe(gulp.dest('./build')),
 );
 
-gulp.task('styles', () =>
+gulp.task('style', () =>
   gulp
-    .src('./src/scss/styles.scss')
+    .src('./src/scss/style.scss')
     .pipe(plumber())
     .pipe(
       stylelint({
@@ -46,7 +46,7 @@ gulp.task('styles', () =>
     .pipe(gcmq())
     .pipe(gulp.dest('./build/css'))
     .pipe(cssnano())
-    .pipe(rename('styles.min.css'))
+    .pipe(rename('style.min.css'))
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream()),
 );
@@ -100,11 +100,11 @@ gulp.task('fonts', () =>
 
 gulp.task('watch', () => {
   gulp.watch('src/**/*.html', ['html']).on('change', browserSync.reload);
-  gulp.watch('src/scss/**/*.scss', ['styles']);
+  gulp.watch('src/scss/**/*.scss', ['style']);
   gulp.watch('src/js/**/*.js', ['scripts']);
 });
 
-gulp.task('serve', ['styles'], () =>
+gulp.task('serve', ['style'], () =>
   browserSync.init({
     server: './build',
     notify: false,
@@ -127,7 +127,7 @@ gulp.task('build', cb =>
     'svg-sprite',
     'images',
     'fonts',
-    'styles',
+    'style',
     'html',
     'scripts',
     cb,
