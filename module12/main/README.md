@@ -48,4 +48,4 @@
 
 If you've found a bug or would like to propose an update, make a fork of this repo and open a pull request with some comments about an update. -->
 
-<a href="build/index.html"></a>
+<a href="./main/build/index.html"></a>
