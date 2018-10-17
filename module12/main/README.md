@@ -1,4 +1,4 @@
-# Gulp Starter Kit - basic gulp boilerplate
+<!-- # Gulp Starter Kit - basic gulp boilerplate
 
 ![banner.png](https://cdn.rawgit.com/axZerk/gulp-starter-kit/741020f0/banner.png)
 
@@ -46,4 +46,6 @@
 
 ## Updates/Bugs
 
-If you've found a bug or would like to propose an update, make a fork of this repo and open a pull request with some comments about an update.
+If you've found a bug or would like to propose an update, make a fork of this repo and open a pull request with some comments about an update. -->
+
+<a href="build/index.html"></a>
