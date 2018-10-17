@@ -10,7 +10,7 @@ const temp = Handlebars.compile(source);
 
 
 const fetchUrl = (qwery) => {
-	return fetch(`https://api.linkpreview.net/?key=5bb3d3d85d2689e5629a2de473cd5362919f9edc33853&q=${qwery}`)
+	return fetch(`http://api.linkpreview.net/?key=5bb3d3d85d2689e5629a2de473cd5362919f9edc33853&q=${qwery}`)
 	.then(response => {
 		if(response.ok) return response.json();
 

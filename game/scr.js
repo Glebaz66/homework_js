@@ -1,5 +1,6 @@
-const cards = document.querySelectorAll('.card');
-const restart = document.querySelector('button[type=reset]')
+const cards = document.querySelectorAll(".card");
+const restart = document.querySelector("button[type=reset]");
+const time = document.querySelector(".js-couter-time");
 
 let hasFlippedCard = false;
 let lockBoard = false;
@@ -9,7 +10,7 @@ function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
 
-  this.classList.add('flip');
+  this.classList.add("flip");
 
   if (!hasFlippedCard) {
     hasFlippedCard = true;
@@ -29,12 +30,12 @@ function checkForMatch() {
 }
 
 function resetBoard() {
-    [hasFlippedCard, lockBoard] = [false, false];
-    [firstCard, secondCard] = [null, null];
-  }
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
 function disableCards() {
-  firstCard.removeEventListener('click', flipCard);
-  secondCard.removeEventListener('click', flipCard);
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
 
   resetBoard();
 }
@@ -43,14 +44,12 @@ function unflipCards() {
   lockBoard = true;
 
   setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
 
     resetBoard();
   }, 1000);
 }
-
-
 
 (function shuffle() {
   cards.forEach(card => {
@@ -60,12 +59,23 @@ function unflipCards() {
 })();
 
 restartBtn = () => {
-    window.location.reload();
-    // document.querySelector('.card.flip');
-    // if(firstCard.nodeName || secondCard.classList == 'flip'){
-    //   resetBoard();
-    // }
-}
+  window.location.reload();
+  // document.querySelector('.card.flip');
+  // if(firstCard.nodeName || secondCard.classList == 'flip'){
+  //   resetBoard();
+  // }
+};
 
-cards.forEach(card => card.addEventListener('click', flipCard));
-restart.addEventListener('click', restartBtn);
+cards.forEach(card => card.addEventListener("click", flipCard));
+restart.addEventListener("click", restartBtn);
+
+// ----------timer-------------
+let startCounter;
+function timer(){
+  startCounter = time.innerHTML;
+  time.innerHTML -= 1
+  setInterval(1000);
+};
+console.log(time.innerHTML);
+
+// ----------timer-------------

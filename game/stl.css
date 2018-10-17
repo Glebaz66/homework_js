@@ -5,18 +5,18 @@
 }
 body {
   background: #41da6d;
-  font-family: 'Krub', sans-serif;
+  font-family: "Krub", sans-serif;
 }
 .header {
-    padding-top: 60px;
-    display: flex;
-    justify-content: center;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
 }
 .header-text {
-    color: aliceblue;
-    font-size: 20px;
-    text-shadow: 1px 1px 1px rgb(255, 21, 255);
-    text-transform: uppercase;
+  color: aliceblue;
+  font-size: 20px;
+  text-shadow: 1px 1px 1px rgb(255, 21, 255);
+  text-transform: uppercase;
 }
 .wrap {
   display: flex;
@@ -38,11 +38,11 @@ body {
   transition: transform 0.5s;
 }
 .card:active {
-    transform: scale(0.97);
-    transition: transform 0.2s;
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 .card.flip {
-    transform: rotateY(180deg);
+  transform: rotateY(180deg);
 }
 
 .front,
@@ -56,12 +56,12 @@ body {
   border: none;
 }
 .back {
-    padding: 0;
-    width: 100%;
+  padding: 0;
+  width: 100%;
 }
 .front {
-    transform: rotateY(180deg);
-    width: 50%;
+  transform: rotateY(180deg);
+  width: 50%;
 }
 .control {
   display: flex;
@@ -98,6 +98,25 @@ body {
   outline: none;
 }
 .btn-hover.color {
-  background-image: linear-gradient(to right,#29323c,#83b2e6,#2b5876,#4e4376);
+  background-image: linear-gradient(
+    to right,
+    #29323c,
+    #83b2e6,
+    #2b5876,
+    #4e4376
+  );
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+.couter-wrap {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.couter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.couter-time {
+  font-size: 30px;
+  font-weight: 800;
 }

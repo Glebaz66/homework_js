@@ -1,0 +1,5 @@
+canvas { 
+    background: #eee;
+    width: 800px;
+    transform: translateX(25%);
+}
