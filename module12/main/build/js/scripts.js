@@ -11,7 +11,7 @@ var source = template.innerHTML.trim();
 var temp = Handlebars.compile(source);
 
 var fetchUrl = function fetchUrl(qwery) {
-	return fetch('http://api.linkpreview.net/?key=5bc324a761e829167cc8accc959198587364ce47e85f1&q=' + qwery).then(function (response) {
+	return fetch('https://api.linkpreview.net/?key=5bc324a761e829167cc8accc959198587364ce47e85f1&q=' + qwery).then(function (response) {
 		if (response.ok) return response.json();
 
 		throw new Error('error');
