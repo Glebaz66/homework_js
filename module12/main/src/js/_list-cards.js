@@ -10,7 +10,7 @@ const temp = Handlebars.compile(source);
 
 
 const fetchUrl = (qwery) => {
-	return fetch(`http://api.linkpreview.net/?key=5bb3d3d85d2689e5629a2de473cd5362919f9edc33853&q=${qwery}`)
+	return fetch(`http://api.linkpreview.net/?key=5bc324a761e829167cc8accc959198587364ce47e85f1&q=${qwery}`)
 	.then(response => {
 		if(response.ok) return response.json();
 
@@ -59,4 +59,4 @@ function handleDelBtn(e) {
 }
 
 form.addEventListener('submit', handleFormSubmit);
-listCards.addEventListener('click', handleDelBtn)
+listCards.addEventListener('click', handleDelBtn);
