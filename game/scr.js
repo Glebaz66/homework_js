@@ -73,7 +73,7 @@ restart.addEventListener("click", restartBtn);
 let startCounter;
 function timer(){
   startCounter = time.innerHTML;
-  time.innerHTML -= 1
+  time.innerHTML --
   setInterval(1000);
 };
 console.log(time.innerHTML);
