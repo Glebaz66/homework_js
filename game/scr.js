@@ -5,14 +5,6 @@ let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
 
-
-startGame = () => {
-  card.addEventListener("click", timerStart);
-  return console.log(cards);
-  
-}
-console.log(startGame);
-
 function flipCard() {
   if (lockBoard) return;
   if (this === firstCard) return;
@@ -72,21 +64,53 @@ restartBtn = () => {
 cards.forEach(card => card.addEventListener("click", flipCard));
 restart.addEventListener("click", restartBtn);
 
+// ---get ready
+const getReadyTitle = document.querySelector('.get-ready');
+
+let getReadyTitleColor = function() {
+  return Math.floor(Math.random() * 255)
+};
+let getReadyTitleSize = function() {
+  if(getReadyTitle.style.fontSize == '50' + 'px'){
+    getReadyTitle.style.fontSize = '45' + 'px';
+  }
+  else {
+    getReadyTitle.style.fontSize = '50' + 'px';
+  }
+    return getReadyTitle.style.fontSize;
+};
+setInterval(function() {
+  getReadyTitle.style.color = 'rgb(' + getReadyTitleColor() + ',' + getReadyTitleColor() + ',' + getReadyTitleColor() + ')';
+  getReadyTitle.style.fontSize = getReadyTitleSize() + 'px';
+}, 1000);
+setTimeout(() => {
+  document.querySelector('.couter').style.display = 'flex';
+  document.querySelector('.get-ready').style.display = 'none';
+  document.querySelector('.wrap').style.display = 'flex';
+  document.querySelector('.btn').style.display = 'block';
+
+}, 5000);
+
+// ---get ready
 // ----------timer-------------
 const time = document.querySelector(".js-couter-time");
-console.log(time);
-
-function timerStart() {
-  let currentCount = 30;
-  const startCounter = setInterval(function() {
-    time.textContent = `Time left: ${currentCount}`
-    if (currentCount == 0) clearInterval(startCounter);
-    currentCount--;
-    
-  }, 1000);
-};
-cards.addEventListener('click', timerStart);
-console.log(cards);
-
+setTimeout(() => {
+  (function timerStart() {
+    let currentCount = 30;
+    const startCounter = setInterval(function() {
+      if (currentCount == 1) clearInterval(startCounter);
+      currentCount--;
+      console.log(time.textContent);
+      return time.textContent = `Time left: ${currentCount} seconds` ;
+    }, 1000); 
+  })();
+}, 5000) //delay for starting countdown for 30sec
 
 // ----------timer-------------
+const stopGame = () =>{
+  if(time.textContent === 'Time left: 0 seconds'){
+   return disableCards();
+  } 
+
+}
+  

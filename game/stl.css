@@ -6,6 +6,7 @@
 body {
   background: #41da6d;
   font-family: "Krub", sans-serif;
+  user-select: none;
 }
 .header {
   padding-top: 60px;
@@ -18,8 +19,18 @@ body {
   text-shadow: 1px 1px 1px rgb(255, 21, 255);
   text-transform: uppercase;
 }
+.get-ready {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: aliceblue;
+  text-shadow: 1px 1px 1px rgb(255, 21, 255);
+  line-height: 30px;
+}
 .wrap {
-  display: flex;
+  display: none;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
@@ -70,6 +81,7 @@ body {
 
 .btn {
   font-size: 20px;
+  display: none;
 }
 .btn-hover {
   width: 200px;
@@ -112,7 +124,8 @@ body {
   padding-right: 40px;
 }
 .couter {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-flow: column nowrap;
   justify-content: space-between;
   font-size: 30px;
