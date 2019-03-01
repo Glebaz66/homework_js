@@ -107,16 +107,15 @@ body {
   );
   box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
 }
-.couter-wrap {
+.stats {
   padding-left: 40px;
   padding-right: 40px;
 }
 .couter {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: space-between;
-}
-.couter-time {
   font-size: 30px;
   font-weight: 800;
 }
+
