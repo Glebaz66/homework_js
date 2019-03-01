@@ -89,18 +89,18 @@ setTimeout(() => {
   document.querySelector('.wrap').style.display = 'flex';
   document.querySelector('.btn').style.display = 'block';
 
-}, 5000);
+}, 5000); //delay for starting countdown for 30sec
 
 // ---get ready
 // ----------timer-------------
 const time = document.querySelector(".js-couter-time");
 setTimeout(() => {
   (function timerStart() {
-    let currentCount = 30;
+    let currentCount = 31;
     const startCounter = setInterval(function() {
-      if (currentCount == 1) clearInterval(startCounter);
+      if (currentCount === 1) clearInterval(startCounter);
       currentCount--;
-      console.log(time.textContent);
+      // console.log(time.textContent);
       return time.textContent = `Time left: ${currentCount} seconds` ;
     }, 1000); 
   })();
@@ -109,7 +109,7 @@ setTimeout(() => {
 // ----------timer-------------
 const stopGame = () =>{
   if(time.textContent === 'Time left: 0 seconds'){
-   return disableCards();
+   return resetBoard();
   } 
 
 }
