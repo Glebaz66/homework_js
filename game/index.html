@@ -1,87 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memorize THIS</title>
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet" />
+    <link rel="stylesheet" href="./stl.css" />
+  </head>
+  <body>
+    <section class="header">
+      <h1 class="header-text">Find two similar charachters</h1>
+    </section>
+    <section class="stats">
+      <div class="get-ready">get ready</div>
+      <div class="couter">
+        <div class="couter-time js-couter-time"></div>
+        <div class="couter-move js-couter-move">Moves: 0</div>
+        <div class="couter-score js-couter-score">Score: 100</div>
+      </div>
+    </section>
+    <section class="wrap">
+      <div class="card" data-char="homer">
+        <img class="front" src="./img/homer.png" alt="homer" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="homer">
+        <img class="front" src="./img/homer.png" alt="homer" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Memorize THIS</title>
-  <link href="https://fonts.googleapis.com/css?family=Krub:400,700" rel="stylesheet">
-  <link rel="stylesheet" href="./stl.css">
-</head>
-<body>
-  <section class="header">
-    <h1 class="header-text">Find two similar charachters</h1>
-  </section>
-  <section class="stats">
-    <div class="get-ready">get ready</div>
-    <div class="couter">
-      <div class="couter-time js-couter-time">Time left: 30 seconds</div>
-      <div class="couter-move js-couter-move">Moves: 0</div>
-      <div class="couter-score js-couter-score">Score: 100</div>
-    </div>
-  </section>
-  <section class="wrap">
-    <div class="card" data-char="homer">
-      <img class="front" src="./img/homer.png" alt="homer" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="homer">
-      <img class="front" src="./img/homer.png" alt="homer" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
+      <div class="card" data-char="morty">
+        <img class="front" src="./img/morty.png" alt="morty" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="morty">
+        <img class="front" src="./img/morty.png" alt="morty" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
 
-    <div class="card" data-char="morty">
-      <img class="front" src="./img/morty.png" alt="morty" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="morty">
-      <img class="front" src="./img/morty.png" alt="morty" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
+      <div class="card" data-char="jake">
+        <img class="front" src="./img/jake.png" alt="jake" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="jake">
+        <img class="front" src="./img/jake.png" alt="jake" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
 
-    <div class="card" data-char="jake">
-      <img class="front" src="./img/jake.png" alt="jake" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="jake">
-      <img class="front" src="./img/jake.png" alt="jake" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
+      <div class="card" data-char="bender">
+        <img class="front" src="./img/bender.png" alt="bender" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="bender">
+        <img class="front" src="./img/bender.png" alt="bender" />
+        <img class="back" src="img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
 
-    <div class="card" data-char="bender">
-      <img class="front" src="./img/bender.png" alt="bender" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="bender">
-      <img class="front" src="./img/bender.png" alt="bender" />
-      <img class="back" src="img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
+      <div class="card" data-char="skrupy">
+        <img class="front" src="./img/skrupy.png" alt="skrupy" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="skrupy">
+        <img class="front" src="./img/skrupy.png" alt="skrupy" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
 
-    <div class="card" data-char="skrupy">
-      <img class="front" src="./img/skrupy.png" alt="skrupy" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="skrupy">
-      <img class="front" src="./img/skrupy.png" alt="skrupy" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
+      <div class="card" data-char="hypnotoad">
+        <img class="front" src="./img/hypnotoad.png" alt="hypnotoad" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+      <div class="card" data-char="hypnotoad">
+        <img class="front" src="./img/hypnotoad.png" alt="hypnotoad" />
+        <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
+      </div>
+    </section>
 
-    <div class="card" data-char="hypnotoad">
-      <img class="front" src="./img/hypnotoad.png" alt="hypnotoad" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-    <div class="card" data-char="hypnotoad">
-      <img class="front" src="./img/hypnotoad.png" alt="hypnotoad" />
-      <img class="back" src="./img/Bullseye-Gradient.svg" alt="cover" />
-    </div>
-  </section>
+    <section class="control">
+      <button class="btn btn-hover color reset" type="reset">
+        Restart game
+      </button>
+    </section>
 
-  <section class="control">
-    <button class="btn btn-hover color reset" type="reset">Restart game</button>
-  </section>
-
-  <script src="./scr.js"></script>
-</body>
-
+      <div class="lose-popup">
+        <div class="lose-popup-text">you lost</div>
+      </div>
+      <div class="win-popup">
+        <p class="win-popup-text">you win</p>
+      </div>
+    <script src="./scr.js"></script>
+  </body>
 </html>
