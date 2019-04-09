@@ -156,4 +156,12 @@ body {
   text-shadow: 1px 1px 1px rgb(255, 21, 255);
   margin: auto;
 }
-
+@media screen and (min-width: 320px) and (max-width:500px){
+  .front{
+    width: 100%;
+  }
+  .front,
+  .back {
+    height: 65%;
+  }
+}

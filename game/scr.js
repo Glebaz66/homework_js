@@ -1,9 +1,12 @@
 const cards = document.querySelectorAll(".card");
 const restart = document.querySelector("button[type=reset]");
 
+const cardClick = document.querySelectorAll('.back');
+
 let hasFlippedCard = false;
 let lockBoard = false;
 let firstCard, secondCard;
+let isCardClicked = false;
 
 function flipCard() {
   if (lockBoard) return;
@@ -17,6 +20,35 @@ function flipCard() {
   secondCard = this;
   checkForMatch();
 }
+
+
+document.querySelectorAll('.back').onclick = function(e) {
+  let target = e.target;
+  console.log(e.target);
+  
+  if (target.classList != '.back') return;
+  let cnt = target.closest('li').querySelector('.cnt');
+  cnt.innerText = parseInt(cnt.innerText, 10)+1;
+}();
+
+// let click = '';
+// console.log(cardClick);
+
+// const moveCount = function(cardClick) {
+//   e.target = '';
+//   e.preventDefault();
+//   let currentCount;
+//   if(cardClick.classList === 'back'){
+//     currentCount++;
+//     console.log(currentCount);
+    
+//   }
+//   return console.log(e.target);
+  
+// }
+// cardClick.addEventListener("click", moveCount);
+
+
 
 function checkForMatch() {
   const isMatch = firstCard.dataset.char === secondCard.dataset.char;
@@ -83,55 +115,38 @@ setTimeout(() => {
   document.querySelector('.wrap').style.display = 'flex';
   document.querySelector('.btn').style.display = 'block';
 
-}, 5000); //delay for starting countdown for 30sec
+}, 1000); //delay for starting countdown for 30sec
 
 // ---get ready
 // ----------timer-------------
-const time = document.querySelector(".js-couter-time");
-time.textContent = 'Time left: 30 seconds';
-setTimeout(() => {
-  (function timerStart() {
-    let currentCount = 30;
-    const startCounter = setInterval(function() {
-      if (currentCount === 1) clearInterval(startCounter);
-      currentCount--;
-      return time.textContent = `Time left: ${currentCount} seconds` ;
-    }, 1000); 
-  })();
-}, 5000) //delay for starting countdown for 30sec
+// const time = document.querySelector(".js-couter-time");
+// time.textContent = 'Time left: 30 seconds';
+// setTimeout(() => {
+//   (function timerStart() {
+//     let currentCount = 30;
+//     const startCounter = setInterval(function() {
+//       if (currentCount === 1) clearInterval(startCounter);
+//       currentCount--;
+//       return time.textContent = `Time left: ${currentCount} seconds` ;
+//     }, 1000); 
+//   })();
+// }, 5000) //delay for starting countdown for 30sec
 
 // ----------timer-------------
-const stopGame = function(){
- const lose = document.querySelector('.lose-popup');
+// const stopGame = function(){
+//  const lose = document.querySelector('.lose-popup');
  
- setTimeout(() => {
-   if(time.textContent === 'Time left: 0 seconds'){
-     lose.style.display = 'flex';
-    }
-  }, 36000);
-}();
+//  setTimeout(() => {
+//    if(time.textContent === 'Time left: 0 seconds'){
+//      lose.style.display = 'flex';
+//     }
+//   }, 36000);
+// }();
 
 // const win = document.querySelector('.win-popup'); in progress
 
 // ===============================
 // moves count
 
-// let click = '';
-const img = document.querySelectorAll('.back');
-let click = '';
-console.log(img);
 
-const moveCount = function(img) {
-  e.target = '';
-  e.preventDefault();
-  let currentCount;
-  if(img.classList === 'back'){
-    currentCount++;
-    console.log(currentCount);
-    
-  }
-  return console.log(e.target);
-  
-}
-click.addEventListener("click", moveCount);
 
